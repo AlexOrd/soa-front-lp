@@ -1,0 +1,121 @@
+
+.header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #000A4E;
+    height: 4em;
+   padding: 0 2em;
+   
+.num-btn{
+    background-color: transparent;
+    color: #fff;
+    border: none;
+    font-family: 'Poppins', sans-serif ;
+    font-size: 1.5em;
+    cursor: pointer;
+}
+}
+.general{
+    background-color: #fff;
+    padding: 2em;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    .title-block{
+        width: 55%;
+        text-align: center;
+    .title{
+        font-weight: bold;
+        font-size: 2.3em;
+    }
+    .title-med{
+        font-size: 2em;
+        font-weight: bold;
+    }
+    .subtitle{
+        color: #0B69F5;
+        font-weight: 400;
+        margin-top: 0;
+    }
+    .description{
+        font-size: 1.1em;
+        font-weight: 400;
+        margin: 1.5em 0;
+    }
+    .end-title{
+        font-size: 1.5em;
+    }
+    .separator{
+        background-image: url(../../assets/separator.svg);
+        height: 8px;
+        background-repeat: no-repeat;
+        background-position:center center;
+    }
+    .info-text-block{
+        width: 50%;
+    }
+}
+.video-form-block{
+    width: 70%;
+    margin-top: 20px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-column-gap: 0.2em;
+    .video-block{
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        height: 400px;
+        .video-title{
+            font-size: 1.1em;
+            margin:0;
+        }
+        .video-subtitle{
+            font-size: 0.7em;
+            font-weight: 400 !important;
+            margin: 10px 0;
+        }
+        .video{
+            border: 1px solid red;
+            width: 100%;
+            height: 330px;
+        }
+    }
+}
+.info-pics-block{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 1em;
+    width: 70%;
+    margin-top: 4em;
+    .pic-text-block{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        .pic{
+            height: 7.5em;
+            width: 7.5em;
+            background-repeat: no-repeat;
+        background-position:center center;
+        }
+        .tool{
+        background-image: url(../../assets/toolPack.svg);
+        }
+        .track{
+            background-image: url(../../assets/track.svg);
+        }
+        .compl{
+            background-image: url(../../assets/compl.svg);
+        }
+        .title{
+            margin: 1em 0;
+            font-weight: bold;
+        }
+        .text{
+            font-size: 0.8em;
+            text-align: center;
+        }
+    }
+}
+}

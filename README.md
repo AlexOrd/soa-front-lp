@@ -1,6 +1,6 @@
 # SOA labs. Front-End.
 
-### Design [Design](https://www.figma.com/file/zMdaaGbGOn92IX6ybD2Ogk/hiq-test "Design")
+### Design [Figma](https://www.figma.com/file/zMdaaGbGOn92IX6ybD2Ogk/hiq-test "Design")
 
 ### Features
 - Angular SPA;

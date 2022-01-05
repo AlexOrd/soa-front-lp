@@ -12,7 +12,8 @@
             <div class="video-block">
                 <h3 class="video-title">Your business will never stay the same</h3>
                 <span class="video-subtitle">Watch this video to <strong>see why</strong>!</span>
-                <div class="video"></div>
+                <div class="video">         </div>
+                <!-- <iframe width="560" height="315" [src]="safeURL" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe> -->
                 <span class="video-subtitle">Alex Tkachuk, CEO/Co-Founder</span>
             </div>
            <app-main-form></app-main-form>
@@ -44,4 +45,119 @@
             </div>
         </div>
     </section>
+    <section class="pack-section">
+        <div class="pack-name">Real Tool Pack</div>
+        <div class="pack-description-block">
+            <div class="pack-description">
+                <div class="title">Nurture Past Client</div>
+                <div class="desc">Realtors can position themselves as the trusted real estate experts by providing valuable home insights to their clients every month</div>
+                <button class="pack-btn">Get started</button>
+            </div>
+            <div class="pack-img pack1"></div>
+        </div>
+    </section>
+    <section class="pack-section">
+        <div class="pack-description-block">
+            <div class="pack-img pack2"></div>
+            <div class="pack-description">
+                <div class="title">Capture Online Buyers</div>
+                <div class="desc">Realtors can capture online buyers through a high converting landing page funnel that offers insights on over 16 different loan programs and allows buyers to download a pre-qualification certificate instantly</div>
+                <button class="pack-btn">Get started</button>
+            </div>
+            
+        </div>
+    </section>
+    <section class="pack-section">
+        <div class="pack-description-block">
+            <div class="pack-description">
+                <div class="title">Generate Seller Leads</div>
+                <div class="desc">Realtors can provide homeowners access to net equity reports that show what their home is worth today and estimated fees associated with selling their home in todays market</div>
+                <button class="pack-btn">Get started</button>
+            </div>
+            <div class="pack-img pack3"></div>
+        </div>
+    </section>
+    <section class="pack-section">
+        <div class="pack-description-block">
+            <div class="pack-img pack4"></div>
+            <div class="pack-description">
+                <div class="title">Automated Home Reports</div>
+                <div class="desc">Realtors can give their clients access to download pdf automated home financial reports with vauable info like home value, cost of selling, refi options, and much more</div>
+                <button class="pack-btn">Get started</button>
+            </div>
+            
+        </div>
+    </section>
+    <section class="pack-section">
+        <div class="pack-description-block">
+            <div class="pack-description">
+                <div class="title">Pre-mover Farming</div>
+                <div class="desc">Realtors can prospecting their database smarter with a platform that combines big data and predictive analytics so they know who is likely to sell their home this year – a must have tool</div>
+                <button class="pack-btn">Get started</button>
+            </div>
+            <div class="pack-img pack5"></div>
+        </div>
+    </section>
+    <section class="dark">
+        <div class="title">We are helping loan officers across the nation scale their business online</div>
+        <div class="boxes">
+            <div class="box" *ngFor="let comment of comments">
+                <div class="comment">{{comment.text}}</div>
+                <div class="author-block">
+                    <div class="author-img"><img [src]="comment.photo" alt="author1"></div>
+                    <div class="author-name-work">
+                        <div class="name">{{comment.name}}</div>
+                        <div class="work">{{comment.companyName}}</div>
+                    </div>
+                    <div class="author-label"><img [src]="comment.companyLabel" alt="author1"></div>
+                </div>
+            </div>
+            <div class="box"></div>
+            <div class="box"></div>
+            <div class="box"></div>
+        </div>
+    </section>
+    <section class="gradient-hand">
+        <div class="form-hand-block">
+        <div class="start-hand">
+            <div class="start"></div>
+            <div class="hand"></div>
+        </div>
+        <div class="form-card"> <app-main-form></app-main-form></div>
+    </div>
+    
+    <div class="video-comments">
+        <div class="title">See why user love homeIQ</div>
+        <div class="subtitle">Don’t take our word for it, see what some of our users have to say about homeIQ</div>
+        <div class="video-blocks" >
+            <div class="video-block" *ngFor="let item of videoComments">
+                <div class="video"></div>
+                <div class="label-name">
+                    <div class="label"><img [src]="item.companyLabel" alt="label"></div>
+                    <div class="name-work">
+                        <div class="name">{{item.name}}</div>
+                        <div class="work">{{item.companyName}}</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<section class="companies-section">
+    <div class="companies-block">
+    <div class="title">Not Convinced?</div>
+    <div class="subtitle">You will not be the first, we have helped 100’s of Loan Officers accross many brokerages</div>
+    <div class="companies">
+        <div class="company" *ngFor="let company of companies">
+            <img [src]="company.label" alt="label" class="label">
+        </div>
+    </div>
 </div>
+</section>
+<section class="man-block">
+    <div class="nomination-block">
+        <div class="text">HomeIQ has been nominated as one of the most innovative and impactful technology companies serving the real estate industry in 2021</div>
+        <div class="label"></div>
+    </div>
+    <div class="man"></div>
+</section>

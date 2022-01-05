@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-// import { DomSanitizer } from '@angular/platform-browser';
+import { DomSanitizer } from '@angular/platform-browser';
+
 @Component({
   selector: 'app-main',
   templateUrl: './main.component.html',
@@ -84,11 +85,11 @@ export class MainComponent implements OnInit {
       label: '../../assets/company6.svg'
     },
   ]
-  // videoUrl = 'https://www.youtube.com/watch?v=1ozGKlOzEVc.'
-  // safeURL: any;
-  // constructor(videoURL: string, private _sanitizer: DomSanitizer){
-  //   this.safeURL = this._sanitizer.bypassSecurityTrustResourceUrl(videoURL);
-//  }
+  videoUrl = 'https://www.youtube.com/embed/469HWa31dHM'
+  safeURL: any;
+  constructor( private _sanitizer: DomSanitizer){
+    this.safeURL = this._sanitizer.bypassSecurityTrustResourceUrl(this.videoUrl);
+ }
   ngOnInit(): void {
   }
 

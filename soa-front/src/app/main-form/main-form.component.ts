@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { ApiService } from '../services/api.service';
 
 @Component({
   selector: 'app-main-form',
@@ -6,10 +7,12 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./main-form.component.scss']
 })
 export class MainFormComponent implements OnInit {
-
-  constructor() { }
+  constructor(private api: ApiService) { 
+    
+  }
 
   ngOnInit(): void {
+    this.api.getData()
   }
 
 }

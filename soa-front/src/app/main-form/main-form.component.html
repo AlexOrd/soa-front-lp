@@ -1,10 +1,10 @@
-<div class="form-card">
+<form class="form-card" (ngSubmit)="onSubmit()">
     <div class="form-title">
         <div>Book your <strong>demo</strong> to try homeIQ</div>
         <div class="arrow"></div>
     </div>
-    <input class="form-input profile" type="text" placeholder="Name">
-    <input class="form-input mail" type="email"  placeholder="Email">
-    <input class="form-input phone" type="number"  placeholder="Phone">
-    <button class="form-btn">Schedule your demo</button>
-</div>
+    <input class="form-input profile" type="text" name="name" [(ngModel)]="name" placeholder="Name">
+    <input class="form-input mail" type="email"  name="email" [(ngModel)]="email" placeholder="Email">
+    <input class="form-input phone" type="number"  name="phone" [(ngModel)]="phone" placeholder="Phone">
+    <button class="form-btn" type="submit">Schedule your demo</button>
+</form>

@@ -7,6 +7,9 @@ import { DomSanitizer } from '@angular/platform-browser';
   styleUrls: ['./main.component.scss']
 })
 export class MainComponent implements OnInit {
+  
+  // mobileMedia:any = window.matchMedia("(max-width:520px)")
+  
   comments: any[] = [
     {
       text: 'I made $10k in the first few months of signing up with homeIQ... it works!',
@@ -89,6 +92,10 @@ export class MainComponent implements OnInit {
   safeURL: any;
   constructor( private _sanitizer: DomSanitizer){
     this.safeURL = this._sanitizer.bypassSecurityTrustResourceUrl(this.videoUrl);
+    
+    // if(this.mobileMedia.matches){
+    //   alert("Media Matches")
+    // }
  }
   ngOnInit(): void {
   }

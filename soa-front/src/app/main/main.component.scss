@@ -1,11 +1,18 @@
+@import "../../breakpoints.scss";
+
 .header{
     display: flex;
     justify-content: space-between;
     align-items: center;
     background-color: #000A4E;
     height: 4em;
-   padding: 0 2em;
-   
+    padding: 0 2em;
+    @include media("<=phone"){
+        height:auto;
+        flex-direction: column;
+        padding: 2em;
+    }
+ 
 .num-btn{
     background-color: transparent;
     color: #fff;
@@ -13,6 +20,9 @@
     font-family: 'Poppins', sans-serif ;
     font-size: 1.5em;
     cursor: pointer;
+    @include media("<=phone"){
+        font-size: 1.3em;
+    }
 }
 }
 .general{
@@ -24,13 +34,22 @@
     .title-block{
         width: 55%;
         text-align: center;
+        @include media("<=phone"){
+            width: 75%;
+        }
     .title{
         font-weight: bold;
         font-size: 2.3em;
+        @include media("<=phone"){
+            font-size: 1.3em;
+        }
     }
     .title-med{
         font-size: 2em;
         font-weight: bold;
+        @include media("<=phone"){
+            font-size: 1em;
+        }
     }
     .subtitle{
         color: #0B69F5;
@@ -53,6 +72,9 @@
     }
     .info-text-block{
         width: 50%;
+        @include media("<=phone"){
+            width: 75%;
+        }
     }
 }
 .video-form-block{
@@ -61,6 +83,10 @@
     display: grid;
     grid-template-columns: 1fr 1fr;
     grid-column-gap: 0.2em;
+    @include media("<=phone"){
+        grid-template-columns: 1fr;
+        grid-template-rows: auto;
+    }
     .video-block{
         display: flex;
         flex-direction: column;
@@ -83,10 +109,15 @@
     grid-gap: 1em;
     width: 70%;
     margin-top: 4em;
+    @include media("<=phone"){
+        grid-template-columns: 1fr;
+        grid-template-rows: auto;
+    }
     .pic-text-block{
         display: flex;
         flex-direction: column;
         align-items: center;
+        
         .pic{
             height: 7.5em;
             width: 7.5em;
@@ -105,6 +136,7 @@
         .title{
             margin: 1em 0;
             font-weight: bold;
+            
         }
         .text{
             font-size: 0.8em;
@@ -119,6 +151,9 @@
         font-weight: 600;
         text-align: center;
         margin: 2em 0;
+        @include media("<=phone"){
+            font-size: 1.3em;
+        }
     }
     .pack-description-block{
         display: grid;
@@ -126,6 +161,10 @@
         background: linear-gradient(180deg, #F1FAFF 0.47%, #FFFFFF 78.77%);
         background-repeat: no-repeat;
         background-position: center center;
+        @include media("<=phone"){
+            grid-template-columns: 1fr;
+            grid-template-rows: auto;
+        }
         .pack-description{
             display: flex;
             flex-direction: column;
@@ -135,6 +174,9 @@
             .title{
                 font-size: 1.5em;
                 font-weight: 600;
+                @include media("<=phone"){
+                    font-size: 1em;
+                }
                
             }
             .desc{
@@ -181,10 +223,17 @@
     display: flex;
     flex-direction: column;
     align-items: center;
+    @include media("<=phone"){
+        padding: 1em 2em;
+    }
     .boxes{
         display: grid;
         grid-template-columns: repeat(4, 1fr);
         grid-gap: 2em;
+        @include media("<=phone"){
+            grid-template-columns: 1fr;
+            grid-template-rows: repeat(4, 1fr);
+        }
         .box{
             display: flex;
             flex-direction: column;
@@ -233,6 +282,9 @@
     background-color: #DDEAF6;
     padding-top: 4em;
     height: 40vh;
+    @include media("<=phone"){
+        flex-direction: column;
+    }
     .form-card{
         width: 45%;
     }
@@ -256,6 +308,9 @@
             bottom:5%;
             left: 0;
             background-size: contain;
+            @include media("<=phone"){
+                visibility: hidden;
+            }
         }
     }
 }
@@ -269,6 +324,9 @@
     .title{
         font-weight: 600;
         font-size: 2.5em;
+        @include media("<=phone"){
+            font-size: 1.5em;
+        }
     }
     .subtitle{
         font-weight: 400;
@@ -278,6 +336,10 @@
         grid-template-columns: repeat(4,1fr);
         grid-gap: 1em;
         margin-top: 2em;
+        @include media("<=phone"){
+            grid-template-columns: 1fr;
+            grid-template-rows: repeat(4, 1fr);
+        }
         .video-block{
             display: flex;
             flex-direction: column;
@@ -322,6 +384,9 @@
             font-weight: 600;
             font-size: 2.5em;
             margin-bottom: 1em;
+            @include media("<=phone"){
+                font-size: 1.5em;
+            }
         }
         .subtitle{
             font-weight: 400;

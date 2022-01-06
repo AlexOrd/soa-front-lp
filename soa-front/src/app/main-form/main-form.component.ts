@@ -14,6 +14,7 @@ export class MainFormComponent implements OnInit {
   name: string = '';
   email: string = '';
   phone: number = NaN;
+  id: number = NaN;
   
   constructor(private formService: FormService) { 
     
@@ -33,12 +34,19 @@ export class MainFormComponent implements OnInit {
       alert('Please fill all the fields!')
     }
     
-    const newCredentials = {
+    const newCredentials: Form = {
       name: this.name,
       email: this.email,
-      phone: this.phone
+      phone: this.phone,
+      id: this.phone
       
     }
+    
+    this.formService
+    .addCreds(newCredentials)
+    .subscribe((newCredentials) => this.credentials.push(newCredentials));
+    
+    this.formService.getData().subscribe((credentials) => (this.credentials = credentials));
     
     this.name = '';
     this.email = '';

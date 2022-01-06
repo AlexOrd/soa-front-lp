@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
-import { ApiService } from '../services/api.service';
+import { Form } from '../Form';
+import { FormService } from '../services/form.service'
+
 
 @Component({
   selector: 'app-main-form',
@@ -7,17 +9,20 @@ import { ApiService } from '../services/api.service';
   styleUrls: ['./main-form.component.scss']
 })
 export class MainFormComponent implements OnInit {
+  credentials: Form[]= []
+  
   name: string = '';
   email: string = '';
   phone: number = NaN;
   
-  constructor(private api: ApiService) { 
+  constructor(private formService: FormService) { 
     
   }
 
   ngOnInit(): void {
-    this.api.getData()
+    this.formService.getData().subscribe((credentials) => (this.credentials = credentials));
   }
+  
   onSubmit(){
     if(!this.name) {
       alert('Please add a name!')

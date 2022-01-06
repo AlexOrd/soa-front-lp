@@ -135,7 +135,10 @@
         <div class="subtitle">Don’t take our word for it, see what some of our users have to say about homeIQ</div>
         <div class="video-blocks" >
             <div class="video-block" *ngFor="let item of videoComments">
-                <div class="video"></div>
+                <div class="video"><iframe width="100%" height="160" [src]="safeURL" title="YouTube video player" frameborder="0"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+                    allowfullscreen>
+                   </iframe></div>
                 <div class="label-name">
                     <div class="label"><img [src]="item.companyLabel" alt="label"></div>
                     <div class="name-work">

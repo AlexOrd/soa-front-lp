@@ -1,12 +1,6 @@
-export class Form {
-  
-  constructor(
-    name = '',
-    email = '',
-    phone = NaN,
-    id = NaN
-    ) {
-    
-  }
-    
+export interface Form {
+  id?: number;
+  name: string;
+  email: string;
+  phone: number;
   }

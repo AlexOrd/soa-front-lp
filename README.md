@@ -10,3 +10,5 @@
 - The data from the form needs to be sended by Angular HTTP service;
 - (BONUS) Add adaptive mobile view;
 - (BONUS) Add simple Node.js HTTP server;
+
+

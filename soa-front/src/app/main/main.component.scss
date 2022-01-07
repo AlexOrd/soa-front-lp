@@ -356,11 +356,11 @@
             height:350px;
             width: 500px;
             background-repeat: no-repeat;
-            bottom:5%;
+            top:40%;
             left: 0;
             background-size: contain;
             @include media("<=phone"){
-                visibility: hidden;
+                display: none;
             }
         }
     }
@@ -369,7 +369,7 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    padding-top: 20vh;
+    padding-top: 15vh;
     padding-bottom: 2em;
     background: linear-gradient(180deg, #DDEAF7 0%, #FFFFFF 71.34%);
     @include media("<=phone"){

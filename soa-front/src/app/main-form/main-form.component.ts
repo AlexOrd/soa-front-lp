@@ -11,12 +11,13 @@ import { FormBuilder } from '@angular/forms';
 export class MainFormComponent implements OnInit {
   
  customerForm = this.fb.group({
-    name:  ['', Validators.required,  Validators.minLength(3)],
-    email: ['', Validators.required,
+    name:  ['', [Validators.required,  Validators.minLength(3)]],
+    email: ['', [Validators.required,
                 Validators.minLength(4), 
                 Validators.email,
-                Validators.pattern("^[a-z0-9._%+-]+@[a-z0-9.-]+\\.[a-z]{2,4}$")],
-    phone: ['', Validators.minLength(10),
+                Validators.pattern("^[a-z0-9._%+-]+@[a-z0-9.-]+\\.[a-z]{2,4}$")]],
+    phone: ['', [Validators.minLength(10),
+                Validators.pattern("^[0-9]*$")]
                 ],
     
   });
@@ -28,11 +29,11 @@ export class MainFormComponent implements OnInit {
  
   constructor(private fb: FormBuilder) { }
   onSubmit() {
-    // TODO: Use EventEmitter with form value
-    console.warn(this.customerForm.value);
+    console.log(this.customerForm.value);
     if (this.customerForm.invalid) {
       return;
   }
+
   }
   
   }

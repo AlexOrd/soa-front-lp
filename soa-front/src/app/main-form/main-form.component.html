@@ -11,7 +11,14 @@
     ngClass="{'ng-invalid': (customerForm.get('name')?.touched ||
     customerForm.get('name')?.dirty) &&
     !customerForm.get('name')?.valid }"/>
-    
+    <span class="invalid-feedback">
+      <span *ngIf="customerForm.get('name')?.touched && customerForm.get('name')?.errors?.['required']">
+        Please enter your first name.
+      </span>
+      <span *ngIf="customerForm.get('name')?.errors?.['minlength']">
+        The first name must be longer than 3 characters.
+      </span>
+    </span>
     <input 
     class="form-input mail" 
     type="email"  
@@ -20,8 +27,14 @@
     ngClass="{'ng-invalid': (customerForm.get('email')?.touched ||
     customerForm.get('email')?.dirty) &&
     !customerForm.get('email')?.valid }"/>
-
-    
+    <span class="invalid-feedback">
+    <span *ngIf=" customerForm.get('email')?.errors?.['required'] && customerForm.get('email')?.touched">
+      Please enter your email.
+    </span>
+    <span *ngIf="customerForm.get('email')?.errors?.['email']">
+      The email must be valid.
+    </span>
+  </span>
     <input 
     class="form-input phone" 
     type="number"  
@@ -30,7 +43,15 @@
     ngClass="{'ng-invalid': (customerForm.get('phone')?.touched ||
     customerForm.get('phone')?.dirty) &&
     !customerForm.get('phone')?.valid }"/>
-   
+    <span class="invalid-feedback">
+      <span *ngIf="customerForm.get('phone')?.errors?.['minlength']">
+        The phone number must be at least 10 characters.
+      </span>
+    </span>
     <button class="form-btn" [disabled]="!customerForm.valid" type="submit">Schedule your demo</button>
-    <p>Form Status: {{ customerForm.status }}</p>
+    <!-- <p>Form Status: {{ customerForm.status }}</p>
+    <br>Dirty: {{ customerForm.dirty }}
+    <br>Touched: {{ customerForm.touched }}
+    <br>Valid: {{ customerForm.valid }}
+    <br>Value: {{ customerForm.value | json }} -->
 </form>

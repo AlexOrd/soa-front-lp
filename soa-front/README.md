@@ -15,4 +15,4 @@ The structure of project: main component with its styles, form component with it
 Styles everywhere are in scss, written in related units, that makes easier to implement responsive ui. 
 
 
-![](assets/hand.svg)
+![](src/assets/hand.svg)

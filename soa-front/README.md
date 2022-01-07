@@ -6,7 +6,7 @@ This project was generated with [Angular CLI](https://github.com/angular/angular
 
 Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
 
-Run `npm run server` for a json.server. Navigate to `http://localhost:5000/creds`. Here we can see all credentials that have been validated and submited. It's just to show that post requests are working.
+Run `npm run server` for a json.server. 
 
 ## General description
 
@@ -15,4 +15,4 @@ The structure of project: main component with its styles, form component with it
 Styles everywhere are in scss, written in related units, that makes easier to implement responsive ui. 
 
 
-![ScreenShot]
+![](assets/hand.svg)

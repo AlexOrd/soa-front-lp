@@ -1,10 +1,36 @@
-<form class="form-card" (ngSubmit)="onSubmit()">
+<form [formGroup]="customerForm" class="form-card" (ngSubmit)="onSubmit()">
     <div class="form-title">
         <div>Book your <strong>demo</strong> to try homeIQ</div>
         <div class="arrow"></div>
     </div>
-    <input class="form-input profile" type="text" name="name" [(ngModel)]="name" placeholder="Name">
-    <input class="form-input mail" type="email"  name="email" [(ngModel)]="email" placeholder="Email">
-    <input class="form-input phone" type="number"  name="phone" [(ngModel)]="phone" placeholder="Phone">
-    <button class="form-btn" type="submit">Schedule your demo</button>
+    <input 
+    class="form-input profile" 
+    type="text" 
+    formControlName="name" 
+    placeholder="Name"
+    ngClass="{'ng-invalid': (customerForm.get('name')?.touched ||
+    customerForm.get('name')?.dirty) &&
+    !customerForm.get('name')?.valid }"/>
+    
+    <input 
+    class="form-input mail" 
+    type="email"  
+    formControlName="email"  
+    placeholder="Email"
+    ngClass="{'ng-invalid': (customerForm.get('email')?.touched ||
+    customerForm.get('email')?.dirty) &&
+    !customerForm.get('email')?.valid }"/>
+
+    
+    <input 
+    class="form-input phone" 
+    type="number"  
+    formControlName="phone"  
+    placeholder="Phone"
+    ngClass="{'ng-invalid': (customerForm.get('phone')?.touched ||
+    customerForm.get('phone')?.dirty) &&
+    !customerForm.get('phone')?.valid }"/>
+   
+    <button class="form-btn" [disabled]="!customerForm.valid" type="submit">Schedule your demo</button>
+    <p>Form Status: {{ customerForm.status }}</p>
 </form>

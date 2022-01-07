@@ -199,8 +199,8 @@
         background-repeat: no-repeat;
         background-position: center center;
         @include media("<=phone"){
-            grid-template-columns: 1fr;
-            grid-template-rows: auto;
+            display: flex;
+            flex-direction: column;
         }
         .pack-description{
             display: flex;
@@ -239,6 +239,10 @@
             background-position: center center;
             background-repeat: no-repeat;
             background-size: contain;
+            @include media("<=phone"){
+               
+                display: none;
+            }
         }
         .pack1{
             background-image: url(../../assets/pack1.svg);

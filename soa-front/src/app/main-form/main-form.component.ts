@@ -35,8 +35,15 @@ export class MainFormComponent implements OnInit {
     if (this.customerForm.invalid) {
       return;
   }
-  this.formService
-    .addCreds(this.customerForm.value)
+  
+    this.formService.addCreds(this.customerForm.value);
+    
+    this.customerForm.setValue({
+      name: '',
+      email: '',
+      phone: ''
+    })
+    this.customerForm.markAsUntouched();
   }
   
   }

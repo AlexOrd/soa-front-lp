@@ -10,9 +10,18 @@ Run `npm run server` for a json.server.
 
 ## General description
 
-The structure of project: main component with its styles, form component with its styles, form service with apiUrl 'http://localhost:5000/creds'
+The structure of project: 
+
+Main component with its styles,
+Form component with its styles,
+Form service with apiUrl 'http://localhost:5000/creds'
+
+There were used Reactive Forms of Angular as well as their built-in validation through Validators Module.
 
 Styles everywhere are in scss, written in related units, that makes easier to implement responsive ui. 
 
+Here are some screen of mobile version
 
-![](src/assets/hand.svg)
+![](src/assets/Screenshot_1.png)
+![](src/assets/Screenshot_2.png)
+![](src/assets/Screenshot_3.png)
